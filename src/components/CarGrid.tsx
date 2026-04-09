@@ -16,6 +16,7 @@ type Car = {
     imageHeight: number;
 };
 
+
 const cars: Car[] = [
     {
         id: "luxe",
