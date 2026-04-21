@@ -10,9 +10,9 @@ export default function Loading() {
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 className="text-4xl md:text-5xl font-black text-white font-inter tracking-widest uppercase mb-6 flex items-center gap-2"
             >
-                IGLI <span className="text-red-600 drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]">AUTO</span>
+                IGLI <span className="text-primary drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]">AUTO</span>
             </motion.div>
-            <div className="w-16 h-1 bg-red-600 rounded-full animate-pulse shadow-[0_0_20px_rgba(220,38,38,0.8)]" />
+            <div className="w-16 h-1 bg-primary rounded-full animate-pulse shadow-[0_0_20px_rgba(220,38,38,0.8)]" />
         </div>
     );
 }

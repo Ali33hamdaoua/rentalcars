@@ -13,8 +13,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Igli Auto | Location de Voitures de Luxe",
-  description: "Agence de location de voitures de luxe et économiques. Choisissez Igli Auto pour une expérience premium.",
+  title: "Location de Voitures Agadir | IGLI AUTO",
+  description: "____⚜️ LOCATION DE VOITURES ⚜️____ (IGLI AUTO). Service rapide et prix compétitifs 🚘🇲🇦 | Agadir centre & aéroport ✈️",
+  keywords: ["location voiture agadir", "rental car morocco", "cheap car agadir", "igli auto"],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

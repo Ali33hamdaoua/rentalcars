@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, Fuel, Users, Settings2 } from "lucide-react";
+import { ChevronLeft, Fuel, Users, Settings2, Car } from "lucide-react";
 import BookingIconButton from "@/components/BookingIconButton";
 import { CarModel, CATEGORY_NAMES } from "@/data/fleet";
 
@@ -17,8 +17,8 @@ const CATEGORY_STYLES: Record<string, { badge: string; cardAccent: string }> = {
         cardAccent: "hover:border-amber-500/50",
     },
     luxe: {
-        badge: "bg-red-600/20 text-red-400 border-red-500/30",
-        cardAccent: "hover:border-red-600/50",
+        badge: "bg-primary/20 text-primary border-primary/30",
+        cardAccent: "hover:border-primary/50",
     },
 };
 
@@ -39,14 +39,14 @@ export default function CategoryClient({
         <main className="min-h-screen bg-black pt-32 pb-24 px-6 relative overflow-hidden">
             {/* Premium ambient glow for Luxe */}
             {isLuxe && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-600/8 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
             )}
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Back button */}
                 <Link
                     href="/#flotte"
-                    className="inline-flex items-center gap-2 text-gray-500 hover:text-red-600 transition-colors mb-12 group font-black text-sm tracking-widest uppercase font-inter"
+                    className="inline-flex items-center gap-2 text-gray-500 hover:text-primary transition-colors mb-12 group font-black text-sm tracking-widest uppercase font-inter"
                 >
                     <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                     Retour au Garage
@@ -64,7 +64,7 @@ export default function CategoryClient({
                             initial={{ scaleX: 0 }}
                             animate={{ scaleX: 1 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeInOut" }}
-                            className="absolute -bottom-4 left-0 w-full h-3 lg:h-4 bg-red-600 origin-left shadow-[0_0_25px_rgba(220,38,38,0.8)]"
+                            className="absolute -bottom-4 left-0 w-full h-3 lg:h-4 bg-primary origin-left shadow-[0_0_25px_rgba(220,38,38,0.6)]"
                         />
                     </motion.h1>
 
@@ -89,7 +89,7 @@ export default function CategoryClient({
                             href={`/flotte/${id}`}
                             className={`px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
                                 id === categoryId
-                                    ? "bg-red-600 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)]"
+                                ? "bg-primary text-white shadow-[0_0_20px_rgba(220,38,38,0.3)]"
                                     : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10"
                             }`}
                         >
@@ -111,7 +111,7 @@ export default function CategoryClient({
                             }`}
                         >
                             {/* Hover overlay */}
-                            <div className="absolute inset-0 bg-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                             {/* Best Value badge */}
                             {car.bestValue && (
@@ -129,17 +129,21 @@ export default function CategoryClient({
 
                             {/* Car image */}
                             <div className="relative h-[220px] w-full mb-6 pointer-events-none z-10 flex items-center justify-center">
-                                <Image
-                                    src={car.img}
-                                    alt={car.nom}
-                                    fill
-                                    className="object-contain object-center drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all duration-700 ease-out group-hover:scale-110"
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                />
+                                {car.img ? (
+                                    <Image
+                                        src={car.img}
+                                        alt={car.nom}
+                                        fill
+                                        className="object-contain object-center drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] group-hover:drop-shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all duration-700 ease-out group-hover:scale-110"
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                ) : (
+                                    <Car size={80} className="text-white/5 group-hover:text-primary/10 transition-colors" />
+                                )}
                             </div>
 
                             {/* Car name */}
-                            <h3 className="text-2xl font-black text-white uppercase font-inter tracking-tighter mb-3 group-hover:text-red-600 transition-colors relative z-10">
+                            <h3 className="text-2xl font-black text-white uppercase font-inter tracking-tighter mb-3 group-hover:text-primary transition-colors relative z-10">
                                 {car.nom}
                             </h3>
 
@@ -167,9 +171,9 @@ export default function CategoryClient({
                                     </p>
                                     <p className={`text-3xl font-black font-inter tracking-tighter ${
                                         isLuxe
-                                            ? "text-gold group-hover:text-yellow-400 group-hover:drop-shadow-[0_0_15px_rgba(253,224,71,0.5)]"
-                                            : "text-white group-hover:text-red-600 group-hover:drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]"
-                                    } transition-all`}>
+                                            ? "text-primary group-hover:text-red-500 group-hover:drop-shadow-[0_0_15px_rgba(220,38,38,0.4)]"
+                                            : "text-white group-hover:text-primary transition-all duration-300"
+                                    }`}>
                                         {car.prix} <span className="text-lg">DH/jour</span>
                                     </p>
                                 </div>

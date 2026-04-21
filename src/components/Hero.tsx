@@ -38,10 +38,10 @@ export default function Hero() {
                     className="text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-black font-inter uppercase leading-tight text-white tracking-tighter"
                 >
                     LOUER <br className="md:hidden" />
-                    <span className="text-red-600 drop-shadow-[0_0_20px_rgba(220,38,38,0.5)]">L'EXCEPTION</span>
+                    <span className="text-primary drop-shadow-[0_0_20px_rgba(220,38,38,0.5)]">L'EXCELLENCE</span>
                 </motion.h1>
 
-                {/* Glow Red Button */}
+                {/* Glow Primary Button */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -50,11 +50,11 @@ export default function Hero() {
                 >
                     <button
                         onClick={scrollToFleet}
-                        className="relative group overflow-hidden bg-red-600 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-lg shadow-[0_0_30px_rgba(220,38,38,0.6)] transition-all duration-300 transform hover:scale-105"
+                        className="relative group overflow-hidden bg-primary text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-lg shadow-[0_0_30px_rgba(220,38,38,0.4)] transition-all duration-300 transform hover:scale-105"
                     >
                         {/* Hover fill animation */}
-                        <span className="absolute inset-0 w-full h-full bg-red-700 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
-                        <span className="relative z-10">Parcourir la flotte</span>
+                        <span className="absolute inset-0 w-full h-full bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
+                        <span className="relative z-10 transition-colors duration-300 group-hover:text-primary">Parcourir le garage</span>
                     </button>
                 </motion.div>
 
@@ -69,9 +69,9 @@ export default function Hero() {
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                        className="p-3 rounded-full border border-white/20 bg-black/30 backdrop-blur-sm group-hover:border-red-600/50 transition-colors"
+                        className="p-3 rounded-full border border-white/20 bg-black/30 backdrop-blur-sm group-hover:border-primary/50 transition-colors"
                     >
-                        <ChevronDown className="text-white group-hover:text-red-600 transition-colors" size={24} />
+                        <ChevronDown className="text-white group-hover:text-primary transition-colors" size={24} />
                     </motion.div>
                 </motion.div>
             </div>
