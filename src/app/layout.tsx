@@ -14,8 +14,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Location de Voitures Agadir | IGLI AUTO",
-  description: "____⚜️ LOCATION DE VOITURES ⚜️____ (IGLI AUTO). Service rapide et prix compétitifs 🚘🇲🇦 | Agadir centre & aéroport ✈️",
-  keywords: ["location voiture agadir", "rental car morocco", "cheap car agadir", "igli auto"],
+  description: "IGLI AUTO - Location de voitures à Agadir. Service rapide, prix compétitifs et large choix de véhicules. Livraison gratuite à l'aéroport et au centre-ville. Contact : autoigli5@gmail.com | +212 694-449069.",
+  keywords: ["location voiture agadir", "rental car morocco", "cheap car agadir", "igli auto", "location voiture aéroport agadir"],
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",
