@@ -4,6 +4,10 @@ export type CarModel = {
     prix: number;          // DH per day
     img: string;           // Keeping empty placeholder as requested
     categorie: string;     // "luxe" | "semi-luxe" | "economique"
+    bestValue?: boolean;
+    moteur?: string;
+    transmission?: string;
+    places?: number;
 };
 
 export const FLOTTE: Record<string, CarModel[]> = {

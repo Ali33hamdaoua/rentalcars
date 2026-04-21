@@ -149,18 +149,24 @@ export default function CategoryClient({
 
                             {/* Features row */}
                             <div className="flex flex-wrap gap-2 mb-5 relative z-10">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-full text-[11px] font-bold text-gray-300 bg-white/5">
-                                    <Fuel size={12} />
-                                    {car.moteur}
-                                </span>
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-full text-[11px] font-bold text-gray-300 bg-white/5">
-                                    <Settings2 size={12} />
-                                    {car.transmission}
-                                </span>
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-full text-[11px] font-bold text-gray-300 bg-white/5">
-                                    <Users size={12} />
-                                    {car.places} places
-                                </span>
+                                {car.moteur && (
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-full text-[11px] font-bold text-gray-300 bg-white/5">
+                                        <Fuel size={12} />
+                                        {car.moteur}
+                                    </span>
+                                )}
+                                {car.transmission && (
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-full text-[11px] font-bold text-gray-300 bg-white/5">
+                                        <Settings2 size={12} />
+                                        {car.transmission}
+                                    </span>
+                                )}
+                                {car.places && (
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-white/10 rounded-full text-[11px] font-bold text-gray-300 bg-white/5">
+                                        <Users size={12} />
+                                        {car.places} places
+                                    </span>
+                                )}
                             </div>
 
                             {/* Price + CTA */}
