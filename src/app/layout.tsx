@@ -17,8 +17,9 @@ export const metadata: Metadata = {
   description: "____⚜️ LOCATION DE VOITURES ⚜️____ (IGLI AUTO). Service rapide et prix compétitifs 🚘🇲🇦 | Agadir centre & aéroport ✈️",
   keywords: ["location voiture agadir", "rental car morocco", "cheap car agadir", "igli auto"],
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
   },
 };
 
