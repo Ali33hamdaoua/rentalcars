@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppWidget() {
     const [showMessage, setShowMessage] = useState(false);
-    const phoneNumber = "212694449069"; // Numéro Igli Auto mis à jour
+    const phoneNumber = "212669866774"; // Numéro Igli Auto mis à jour
 
     useEffect(() => {
         // Affiche le message après 5 secondes

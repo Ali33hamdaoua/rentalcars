@@ -120,7 +120,7 @@ export default function FlottePage() {
 
                                 {/* Action Button */}
                                 <a
-                                    href={`https://wa.me/212694449069?text=Bonjour, je souhaite réserver la ${car.nom}`}
+                                    href={`https://wa.me/212669866774?text=Bonjour, je souhaite réserver la ${car.nom}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full bg-white text-black py-4 rounded-2xl font-black uppercase text-xs tracking-[0.2em] flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all shadow-sm"

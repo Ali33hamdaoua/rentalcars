@@ -6,7 +6,7 @@ import { Key } from "lucide-react";
 export default function BookingIconButton({ carName }: { carName: string }) {
     const handleBooking = (e: React.MouseEvent) => {
         e.preventDefault(); // Prevent navigating if this was inside a Link
-        const phone = "212694449069";
+        const phone = "212669866774";
         const message = `Bonjour IGLI AUTO, je souhaite réserver la ${carName} vue sur le site.`;
         window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     };

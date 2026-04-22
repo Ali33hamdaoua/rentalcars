@@ -15,7 +15,7 @@ const BookingSection = () => {
     });
 
     const handleBooking = () => {
-        const phone = "212694449069"; // Numéro Igli Auto mis à jour
+        const phone = "212669866774"; // Numéro Igli Auto mis à jour
         const categoryName = CATEGORY_NAMES[selection.category];
         const message = `Bonjour IGLI AUTO ! 👋%0A%0AJe souhaite réserver :%0A✨ *Catégorie* : ${categoryName}%0A🚗 *Modèle* : ${selection.model}%0A📅 *Durée* : ${selection.days} jour(s).%0A%0AEst-ce disponible ?`;
         window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
