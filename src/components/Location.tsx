@@ -26,10 +26,10 @@ export default function Location() {
                             <span className="text-xs tracking-widest text-black">SUR PLACE OU LIVRAISON</span>
                         </div>
 
-                        <h3 className="text-4xl md:text-5xl font-black text-white font-inter uppercase tracking-tighter mb-4">
-                            NOTRE <br />
-                            <span className="text-primary drop-shadow-[0_0_15px_rgba(220,38,38,0.4)]">AGENCE</span>
-                        </h3>
+                        <h2 className="text-4xl md:text-5xl font-black text-white font-inter uppercase tracking-tighter mb-4">
+                            OÙ NOUS <br />
+                            <span className="text-primary drop-shadow-[0_0_15px_rgba(220,38,38,0.4)]">TROUVER ?</span>
+                        </h2>
 
                         <p className="text-gray-400 text-lg font-medium mb-8">
                             Idéalement situé au centre d'Agadir, nous livrons également à l'aéroport et dans toute la région.

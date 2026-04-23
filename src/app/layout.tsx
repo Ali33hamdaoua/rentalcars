@@ -13,9 +13,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Location de Voitures Agadir | IGLI AUTO",
-  description: "IGLI AUTO - Location de voitures à Agadir. Service rapide, prix compétitifs et large choix de véhicules. Livraison gratuite à l'aéroport et au centre-ville. Contact : autoigli5@gmail.com | 0669866774.",
-  keywords: ["location voiture agadir", "rental car morocco", "cheap car agadir", "igli auto", "location voiture aéroport agadir"],
+  title: "Igli Auto | Location de Voitures de Luxe & Prestige à Agadir",
+  description: "Louez votre voiture de luxe à Agadir avec IGLI AUTO. Large choix de véhicules prestige et économiques. Livraison gratuite Aéroport Agadir Al Massira. Service 24/7. Contactez-nous : +212 669-866774.",
+  keywords: ["location voiture agadir", "location voiture luxe agadir", "rent car agadir", "igli auto", "location voiture aéroport agadir", "car rental morocco"],
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",
