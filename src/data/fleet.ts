@@ -83,7 +83,7 @@ export const FLOTTE: Record<string, CarModel[]> = {
     ],
     "economique": [
         car(301, "Dacia Logan", 280, "/logan.jpeg", "economique", "Manuel / Automatique", "diesel essence"),
-        car(302, "Dacia Sandero", 280, "/sandero.jpeg", "economique", "Manuel", "essence"),
+        car(302, "Dacia Sandero", 280, "/sandero.jpeg", "economique", "Manuel", "diesel"),
         car(303, "Dacia Sandero Stepway", 300, "/sanderostepway.jpeg", "economique", "Manuel", "diesel"),
         car(304, "Hyundai i10", 270, "/i10.jpeg", "economique", "Automatique", "essence"),
         car(305, "Kia Picanto", 270, "/kiapicanto.jpeg", "economique", "Automatique", "essence"),
