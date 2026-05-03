@@ -20,7 +20,7 @@ export default function CarGrid() {
         return ALL_CARS.filter((c: CarModel) => {
             if (activeCategory !== "all" && c.categorie !== activeCategory) return false;
             if (transmission !== "all" && !c.transmission.includes(transmission)) return false;
-            if (fuel !== "all" && c.carburant !== fuel) return false;
+            if (fuel !== "all" && !c.carburant.includes(fuel)) return false;
             if (searchQuery && !c.nom.toLowerCase().includes(searchQuery.toLowerCase())) return false;
             return true;
         });

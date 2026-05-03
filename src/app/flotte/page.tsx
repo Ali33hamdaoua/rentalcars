@@ -20,7 +20,7 @@ export default function FlottePage() {
         return ALL_CARS.filter((c: CarModel) => {
             if (category !== "all" && c.categorie !== category) return false;
             if (transmission !== "all" && !c.transmission.includes(transmission)) return false;
-            if (fuel !== "all" && c.carburant !== fuel) return false;
+            if (fuel !== "all" && !c.carburant.includes(fuel)) return false;
             return true;
         });
     }, [category, transmission, fuel]);

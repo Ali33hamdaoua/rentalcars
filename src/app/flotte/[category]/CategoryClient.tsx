@@ -28,7 +28,7 @@ export default function CategoryClient({
     const filtered = useMemo(() => {
         return cars.filter((c) => {
             if (transmission !== "all" && !c.transmission.includes(transmission)) return false;
-            if (fuel !== "all" && c.carburant !== fuel) return false;
+            if (fuel !== "all" && !c.carburant.includes(fuel)) return false;
             return true;
         });
     }, [cars, transmission, fuel]);

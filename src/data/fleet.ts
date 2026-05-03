@@ -1,5 +1,5 @@
 export type Transmission = "Manuel" | "Automatique" | "Manuel / Automatique";
-export type Fuel = "Diesel" | "Essence";
+export type Fuel = "Diesel" | "Essence" | "Diesel / Essence";
 
 export type CarModel = {
     id: number;
@@ -22,9 +22,10 @@ export type CarModel = {
  */
 export const normalizeFuel = (raw: string): Fuel => {
     const v = raw.toLowerCase().trim();
-    if (v.includes("mazot") || v.includes("diesel") || v.includes("gasoil") || v.includes("gazole")) {
-        return "Diesel";
-    }
+    const hasDiesel = /mazot|diesel|gasoil|gazole/.test(v);
+    const hasEssence = /essence|petrol|gasoline/.test(v);
+    if (hasDiesel && hasEssence) return "Diesel / Essence";
+    if (hasDiesel) return "Diesel";
     return "Essence";
 };
 
@@ -52,21 +53,21 @@ const car = (
 
 export const FLOTTE: Record<string, CarModel[]> = {
     "luxe": [
-        car(101, "Mercedes GLC", 2200, "/glc.png", "luxe", "Automatique", "diesel"),
+        car(101, "Mercedes GLC", 2200, "/glc.jpeg", "luxe", "Automatique", "diesel"),
         car(102, "Mercedes Classe A", 900, "/class_a.jpeg", "luxe", "Automatique", "diesel"),
         car(103, "Mercedes CLA", 1200, "/cla.jpeg", "luxe", "Automatique", "diesel"),
         car(104, "BMW Série 3", 1000, "/serie3.jpeg", "luxe", "Automatique", "diesel"),
         car(105, "BMW Série 5", 2000, "/serie5.jpeg", "luxe", "Automatique", "diesel"),
         car(106, "Audi A3", 900, "/a3.jpeg", "luxe", "Automatique", "diesel"),
         car(107, "Audi Q3", 1100, "/q3.jpeg", "luxe", "Automatique", "diesel"),
-        car(108, "Range Rover Evoque", 1000, "/rangeevoque.jpeg", "luxe", "Automatique", "essence"),
+        car(108, "Range Rover Evoque", 1000, "/rangeevoque.jpeg", "luxe", "Automatique", "diesel"),
         car(109, "Volkswagen Touareg", 1200, "/touareg.jpeg", "luxe", "Automatique", "mazot"),
         car(110, "Audi Q8", 2200, "/q8.jpeg", "luxe", "Automatique", "diesel"),
-        car(111, "Range Rover Sport", 2200, "/rangesport.jpeg", "luxe", "Automatique", "essence"),
+        car(111, "Range Rover Sport", 2200, "/rangesport.jpeg", "luxe", "Automatique", "diesel"),
         car(112, "Porsche Macan", 2200, "/macan.jpeg", "luxe", "Automatique", "essence"),
     ],
     "semi-luxe": [
-        car(201, "Hyundai Tucson", 600, "/tucson2023.png", "semi-luxe", "Automatique", "diesel", true),
+        car(201, "Hyundai Tucson", 600, "/tucson.jpeg", "semi-luxe", "Automatique", "diesel", true),
         car(202, "Kia Sportage", 600, "/kiasportage.jpg", "semi-luxe", "Automatique", "diesel", true),
         car(203, "Peugeot 3008", 600, "/3008.jpeg", "semi-luxe", "Automatique", "diesel"),
         car(204, "Hyundai Accent", 350, "/accent.jpeg", "semi-luxe", "Automatique", "essence", true),
@@ -81,15 +82,15 @@ export const FLOTTE: Record<string, CarModel[]> = {
         car(213, "Volkswagen T-Roc", 700, "/troc.jpeg", "semi-luxe", "Automatique", "mazot"),
     ],
     "economique": [
-        car(301, "Dacia Logan", 280, "/logan.jpeg", "economique", "Manuel", "diesel"),
-        car(302, "Dacia Sandero", 280, "/sandero.png", "economique", "Manuel", "essence"),
-        car(303, "Dacia Sandero Stepway", 300, "/sanderostepway.png", "economique", "Manuel", "diesel"),
+        car(301, "Dacia Logan", 280, "/logan.jpeg", "economique", "Manuel / Automatique", "diesel essence"),
+        car(302, "Dacia Sandero", 280, "/sandero.jpeg", "economique", "Manuel", "essence"),
+        car(303, "Dacia Sandero Stepway", 300, "/sanderostepway.jpeg", "economique", "Manuel", "diesel"),
         car(304, "Hyundai i10", 270, "/i10.jpeg", "economique", "Automatique", "essence"),
         car(305, "Kia Picanto", 270, "/kiapicanto.jpeg", "economique", "Automatique", "essence"),
-        car(306, "Renault Clio 5", 300, "/clio5.jpeg", "economique", "Manuel", "essence"),
-        car(307, "Peugeot 208", 300, "/208.jpeg", "economique", "Manuel", "diesel"),
+        car(306, "Renault Clio 5", 300, "/clio5.jpeg", "economique", "Manuel / Automatique", "diesel essence"),
+        car(307, "Peugeot 208", 300, "/208.jpeg", "economique", "Manuel / Automatique", "diesel essence"),
         car(308, "Citroën C3", 300, "/c3.jpg", "economique", "Automatique", "essence"),
-        car(309, "Renault Kardian", 300, "/kardian.png", "economique", "Manuel", "essence"),
+        car(309, "Renault Kardian", 300, "/kardian.jpeg", "economique", "Automatique", "essence"),
     ]
 };
 
