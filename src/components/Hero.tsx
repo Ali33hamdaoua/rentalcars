@@ -14,20 +14,20 @@ export default function Hero() {
     return (
         <section id="hero" className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-black">
 
-            {/* Background Video - High contrast night/circuit vibe */}
+            {/* Fullscreen video background */}
             <video
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="absolute inset-0 w-full h-full object-cover z-0 filter contrast-125 saturate-150"
             >
-                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
-                {/* Recommend changing to a dark city driving or race track video */}
+                <source src="/video.mp4" type="video/mp4" />
             </video>
 
-            {/* Black Overlay to ensure text readability */}
-            <div className="absolute inset-0 bg-black/70 z-10" />
+            {/* Dark overlay (opacity 0.5) */}
+            <div className="absolute inset-0 bg-black/50 z-10" />
 
             {/* Content */}
             <div className="relative z-20 text-center px-4 flex flex-col items-center justify-center h-full">
@@ -35,10 +35,10 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-6xl sm:text-7xl md:text-8xl lg:text-[9rem] font-black font-inter uppercase leading-tight text-white tracking-tighter"
+                    className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] font-black font-inter uppercase leading-tight text-white tracking-tighter"
                 >
                     LOUER <br className="md:hidden" />
-                    <span className="text-primary drop-shadow-[0_0_20px_rgba(220,38,38,0.5)]">L'EXCELLENCE</span>
+                    <span className="text-primary drop-shadow-[0_0_20px_rgba(220,38,38,0.5)]">L&apos;EXCELLENCE</span>
                 </motion.h1>
 
                 {/* Glow Primary Button */}
@@ -54,7 +54,7 @@ export default function Hero() {
                     >
                         {/* Hover fill animation */}
                         <span className="absolute inset-0 w-full h-full bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
-                        <span className="relative z-10 transition-colors duration-300 group-hover:text-primary">Parcourir le garage</span>
+                        <span className="relative z-10 transition-colors duration-300 group-hover:text-primary">Voir les voitures</span>
                     </button>
                 </motion.div>
 

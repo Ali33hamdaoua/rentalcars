@@ -83,8 +83,8 @@ export default function Footer() {
                         </li>
                         <li className="flex items-center gap-4 text-gray-400 font-bold group">
                             <Mail className="text-primary shrink-0 group-hover:animate-pulse" size={24} />
-                            <a href="mailto:hibaigli5@gmail.com" className="hover:text-white transition-colors tracking-widest text-sm uppercase">
-                                hibaigli5@gmail.com
+                            <a href="mailto:autoigli@gmail.com" className="hover:text-white transition-colors tracking-widest text-sm uppercase">
+                                autoigli@gmail.com
                             </a>
                         </li>
                     </ul>

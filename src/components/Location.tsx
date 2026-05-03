@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { MapPin, ExternalLink } from "lucide-react";
 
 export default function Location() {
-    const mapUrl = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3441.6395241119412!2d-9.557198!3d30.3895924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b7001f73c589%3A0xe7817cca527acba!2sIGLI%20AUTO%20%3A%20Location%20voiture%20Agadir%20Centre%20%26%20A%C3%A9roport%20-%20Car%20Rental%20Agadir%20Airport%20.!5e0!3m2!1sfr!2sch!4v1776795541922!5m2!1sfr!2sch";
-    const googleMapsLink = "https://www.google.com/maps/place/IGLI+AUTO+:+Location+voiture+Agadir+Centre+%26+A%C3%A9roport+-+Car+Rental+Agadir+Airport+.+/@30.3895924,-9.557198,17z";
+    const googleMapsLink = "https://share.google/DD8H3NGuGUm6TOQMp";
+    const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.6336517587206!2d-9.5572208!3d30.3897591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b7005890e67f%3A0x4b41f2a81a958c45!2sIGLI%20AUTO-Location%20voiture%20Agadir%20a%C3%A9roport!5e0!3m2!1sfr!2sma!4v1777820724271!5m2!1sfr!2sma";
 
     return (
         <section className="py-24 px-6 bg-black relative" id="location">

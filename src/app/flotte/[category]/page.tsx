@@ -6,7 +6,7 @@ export async function generateStaticParams() {
     return [
         { category: 'luxe' },
         { category: 'semi-luxe' },
-        { category: 'economy' },
+        { category: 'economique' },
     ];
 }
 
